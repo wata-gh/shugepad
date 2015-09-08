@@ -1,0 +1,17 @@
+!!!
+%html
+  %head
+    %title シュゲパ！
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    = csrf_meta_tags
+  %body
+    %div{class: "ui fixed main menu"}
+      %div{class: "ui container"}
+        %div{class: "title item"}
+          %b サービス一覧
+        %div{class: "right menu"}
+          %a{class: "popup icon github item", "data-content": "logout", href: "/auth/logout"}
+            %i{class: "sign out icon"}
+    %div{class: "ui main container"}
+      = yield
